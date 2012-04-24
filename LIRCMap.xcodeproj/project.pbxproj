@@ -22,6 +22,7 @@
 		C9A26C051546444400A8BC35 /* LIRCMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A26C041546444400A8BC35 /* LIRCMapTests.m */; };
 		C9A26C0F1546452600A8BC35 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A26C0E1546452600A8BC35 /* MapKit.framework */; };
 		C9A26C111546465A00A8BC35 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A26C101546465A00A8BC35 /* CoreLocation.framework */; };
+		C9A26C141546622B00A8BC35 /* HSVCustomMapOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A26C131546622B00A8BC35 /* HSVCustomMapOverlayView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		C9A26C041546444400A8BC35 /* LIRCMapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LIRCMapTests.m; sourceTree = "<group>"; };
 		C9A26C0E1546452600A8BC35 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C9A26C101546465A00A8BC35 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C9A26C121546622B00A8BC35 /* HSVCustomMapOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSVCustomMapOverlayView.h; sourceTree = "<group>"; };
+		C9A26C131546622B00A8BC35 /* HSVCustomMapOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSVCustomMapOverlayView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,8 @@
 				C9A26BEB1546444400A8BC35 /* HSVViewController.h */,
 				C9A26BEC1546444400A8BC35 /* HSVViewController.m */,
 				C9A26BEE1546444400A8BC35 /* HSVViewController.xib */,
+				C9A26C121546622B00A8BC35 /* HSVCustomMapOverlayView.h */,
+				C9A26C131546622B00A8BC35 /* HSVCustomMapOverlayView.m */,
 				C9A26BE01546444400A8BC35 /* Supporting Files */,
 			);
 			path = LIRCMap;
@@ -269,6 +274,7 @@
 				C9A26BE61546444400A8BC35 /* main.m in Sources */,
 				C9A26BEA1546444400A8BC35 /* HSVAppDelegate.m in Sources */,
 				C9A26BED1546444400A8BC35 /* HSVViewController.m in Sources */,
+				C9A26C141546622B00A8BC35 /* HSVCustomMapOverlayView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

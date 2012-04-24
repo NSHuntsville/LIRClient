@@ -8,6 +8,7 @@
 
 #import <MapKit/MapKit.h>
 #import "HSVViewController.h"
+#import "HSVCustomMapOverlayView.h"
 
 @interface HSVViewController ()
 @property(nonatomic, strong) CLLocationManager *coreLocationManager;
@@ -70,13 +71,9 @@
 #pragma mark Map View Delegates
 
 - (MKOverlayView *)mapView:(MKMapView *)map viewForOverlay:(id <MKOverlay>)overlay {
-    MKCircleView *circleView = [[MKCircleView alloc] initWithOverlay:overlay];
-    circleView.strokeColor = [UIColor redColor];
-    circleView.fillColor = [[UIColor redColor] colorWithAlphaComponent:0.4];
-    return circleView;
+    HSVCustomMapOverlayView * overlayView = [[HSVCustomMapOverlayView alloc] initWithOverlay:overlay];
+    return overlayView;
 }
-
-
 
 
 #pragma mark Core Location Delegate methods
