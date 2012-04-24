@@ -20,6 +20,8 @@
 		C9A26BFA1546444400A8BC35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A26BDB1546444400A8BC35 /* Foundation.framework */; };
 		C9A26C021546444400A8BC35 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9A26C001546444400A8BC35 /* InfoPlist.strings */; };
 		C9A26C051546444400A8BC35 /* LIRCMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A26C041546444400A8BC35 /* LIRCMapTests.m */; };
+		C9A26C0F1546452600A8BC35 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A26C0E1546452600A8BC35 /* MapKit.framework */; };
+		C9A26C111546465A00A8BC35 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A26C101546465A00A8BC35 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,21 +39,23 @@
 		C9A26BD91546444400A8BC35 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C9A26BDB1546444400A8BC35 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C9A26BDD1546444400A8BC35 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		C9A26BE11546444400A8BC35 /* LIRCMap-Info.plist */ = {isa = PBXFileReference; path = "LIRCMap-Info.plist"; sourceTree = "<group>"; };
+		C9A26BE11546444400A8BC35 /* LIRCMap-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LIRCMap-Info.plist"; sourceTree = "<group>"; };
 		C9A26BE31546444400A8BC35 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C9A26BE51546444400A8BC35 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C9A26BE71546444400A8BC35 /* LIRCMap-Prefix.pch */ = {isa = PBXFileReference; path = "LIRCMap-Prefix.pch"; sourceTree = "<group>"; };
-		C9A26BE81546444400A8BC35 /* HSVAppDelegate.h */ = {isa = PBXFileReference; path = HSVAppDelegate.h; sourceTree = "<group>"; };
+		C9A26BE71546444400A8BC35 /* LIRCMap-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LIRCMap-Prefix.pch"; sourceTree = "<group>"; };
+		C9A26BE81546444400A8BC35 /* HSVAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HSVAppDelegate.h; sourceTree = "<group>"; };
 		C9A26BE91546444400A8BC35 /* HSVAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSVAppDelegate.m; sourceTree = "<group>"; };
-		C9A26BEB1546444400A8BC35 /* HSVViewController.h */ = {isa = PBXFileReference; path = HSVViewController.h; sourceTree = "<group>"; };
+		C9A26BEB1546444400A8BC35 /* HSVViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HSVViewController.h; sourceTree = "<group>"; };
 		C9A26BEC1546444400A8BC35 /* HSVViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSVViewController.m; sourceTree = "<group>"; };
 		C9A26BEF1546444400A8BC35 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HSVViewController.xib; sourceTree = "<group>"; };
 		C9A26BF61546444400A8BC35 /* LIRCMapTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LIRCMapTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9A26BF71546444400A8BC35 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		C9A26BFF1546444400A8BC35 /* LIRCMapTests-Info.plist */ = {isa = PBXFileReference; path = "LIRCMapTests-Info.plist"; sourceTree = "<group>"; };
+		C9A26BFF1546444400A8BC35 /* LIRCMapTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LIRCMapTests-Info.plist"; sourceTree = "<group>"; };
 		C9A26C011546444400A8BC35 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C9A26C031546444400A8BC35 /* LIRCMapTests.h */ = {isa = PBXFileReference; path = LIRCMapTests.h; sourceTree = "<group>"; };
+		C9A26C031546444400A8BC35 /* LIRCMapTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LIRCMapTests.h; sourceTree = "<group>"; };
 		C9A26C041546444400A8BC35 /* LIRCMapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LIRCMapTests.m; sourceTree = "<group>"; };
+		C9A26C0E1546452600A8BC35 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C9A26C101546465A00A8BC35 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9A26C111546465A00A8BC35 /* CoreLocation.framework in Frameworks */,
+				C9A26C0F1546452600A8BC35 /* MapKit.framework in Frameworks */,
 				C9A26BDA1546444400A8BC35 /* UIKit.framework in Frameworks */,
 				C9A26BDC1546444400A8BC35 /* Foundation.framework in Frameworks */,
 				C9A26BDE1546444400A8BC35 /* CoreGraphics.framework in Frameworks */,
@@ -81,6 +87,8 @@
 		C9A26BCA1546444400A8BC35 = {
 			isa = PBXGroup;
 			children = (
+				C9A26C101546465A00A8BC35 /* CoreLocation.framework */,
+				C9A26C0E1546452600A8BC35 /* MapKit.framework */,
 				C9A26BDF1546444400A8BC35 /* LIRCMap */,
 				C9A26BFD1546444400A8BC35 /* LIRCMapTests */,
 				C9A26BD81546444400A8BC35 /* Frameworks */,
