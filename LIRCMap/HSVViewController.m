@@ -16,6 +16,9 @@
 
 - (BOOL)isOutsideLastLocation:(CLLocation *)location;
 
+@property(nonatomic, strong) MKCircle *overlay;
+
+
 @end
 
 @implementation HSVViewController
@@ -23,6 +26,7 @@
 @synthesize coreLocationManager = _coreLocationManager;
 @synthesize lastLocation = _lastLocation;
 @synthesize lastLocationTolerance = _lastLocationTolerance;
+@synthesize overlay = _overlay;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -47,6 +51,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self.mapView setShowsUserLocation:YES];
+
+
 }
 
 - (void)viewDidUnload
@@ -60,6 +66,18 @@
 {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
+
+#pragma mark Map View Delegates
+
+- (MKOverlayView *)mapView:(MKMapView *)map viewForOverlay:(id <MKOverlay>)overlay {
+    MKCircleView *circleView = [[MKCircleView alloc] initWithOverlay:overlay];
+    circleView.strokeColor = [UIColor redColor];
+    circleView.fillColor = [[UIColor redColor] colorWithAlphaComponent:0.4];
+    return circleView;
+}
+
+
+
 
 #pragma mark Core Location Delegate methods
 
@@ -83,6 +101,11 @@
 
         [self.mapView setRegion:region animated:YES];
         [self.mapView regionThatFits:region];
+
+        MKCircle *circle = [MKCircle circleWithCenterCoordinate:newLocation.coordinate radius:300]; //radius is in meters
+        [mapView removeOverlay:self.overlay];
+        self.overlay = circle;
+        [mapView addOverlay:self.overlay];
     }
 }
 
