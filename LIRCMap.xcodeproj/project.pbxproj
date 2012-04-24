@@ -1,0 +1,445 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C9A26BDA1546444400A8BC35 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A26BD91546444400A8BC35 /* UIKit.framework */; };
+		C9A26BDC1546444400A8BC35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A26BDB1546444400A8BC35 /* Foundation.framework */; };
+		C9A26BDE1546444400A8BC35 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A26BDD1546444400A8BC35 /* CoreGraphics.framework */; };
+		C9A26BE41546444400A8BC35 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9A26BE21546444400A8BC35 /* InfoPlist.strings */; };
+		C9A26BE61546444400A8BC35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A26BE51546444400A8BC35 /* main.m */; };
+		C9A26BEA1546444400A8BC35 /* HSVAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A26BE91546444400A8BC35 /* HSVAppDelegate.m */; };
+		C9A26BED1546444400A8BC35 /* HSVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A26BEC1546444400A8BC35 /* HSVViewController.m */; };
+		C9A26BF01546444400A8BC35 /* HSVViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9A26BEE1546444400A8BC35 /* HSVViewController.xib */; };
+		C9A26BF81546444400A8BC35 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A26BF71546444400A8BC35 /* SenTestingKit.framework */; };
+		C9A26BF91546444400A8BC35 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A26BD91546444400A8BC35 /* UIKit.framework */; };
+		C9A26BFA1546444400A8BC35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A26BDB1546444400A8BC35 /* Foundation.framework */; };
+		C9A26C021546444400A8BC35 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9A26C001546444400A8BC35 /* InfoPlist.strings */; };
+		C9A26C051546444400A8BC35 /* LIRCMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A26C041546444400A8BC35 /* LIRCMapTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C9A26BFB1546444400A8BC35 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9A26BCC1546444400A8BC35 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9A26BD41546444400A8BC35;
+			remoteInfo = LIRCMap;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C9A26BD51546444400A8BC35 /* LIRCMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LIRCMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9A26BD91546444400A8BC35 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C9A26BDB1546444400A8BC35 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C9A26BDD1546444400A8BC35 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C9A26BE11546444400A8BC35 /* LIRCMap-Info.plist */ = {isa = PBXFileReference; path = "LIRCMap-Info.plist"; sourceTree = "<group>"; };
+		C9A26BE31546444400A8BC35 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C9A26BE51546444400A8BC35 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C9A26BE71546444400A8BC35 /* LIRCMap-Prefix.pch */ = {isa = PBXFileReference; path = "LIRCMap-Prefix.pch"; sourceTree = "<group>"; };
+		C9A26BE81546444400A8BC35 /* HSVAppDelegate.h */ = {isa = PBXFileReference; path = HSVAppDelegate.h; sourceTree = "<group>"; };
+		C9A26BE91546444400A8BC35 /* HSVAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSVAppDelegate.m; sourceTree = "<group>"; };
+		C9A26BEB1546444400A8BC35 /* HSVViewController.h */ = {isa = PBXFileReference; path = HSVViewController.h; sourceTree = "<group>"; };
+		C9A26BEC1546444400A8BC35 /* HSVViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSVViewController.m; sourceTree = "<group>"; };
+		C9A26BEF1546444400A8BC35 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HSVViewController.xib; sourceTree = "<group>"; };
+		C9A26BF61546444400A8BC35 /* LIRCMapTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LIRCMapTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9A26BF71546444400A8BC35 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		C9A26BFF1546444400A8BC35 /* LIRCMapTests-Info.plist */ = {isa = PBXFileReference; path = "LIRCMapTests-Info.plist"; sourceTree = "<group>"; };
+		C9A26C011546444400A8BC35 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C9A26C031546444400A8BC35 /* LIRCMapTests.h */ = {isa = PBXFileReference; path = LIRCMapTests.h; sourceTree = "<group>"; };
+		C9A26C041546444400A8BC35 /* LIRCMapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LIRCMapTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C9A26BD21546444400A8BC35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9A26BDA1546444400A8BC35 /* UIKit.framework in Frameworks */,
+				C9A26BDC1546444400A8BC35 /* Foundation.framework in Frameworks */,
+				C9A26BDE1546444400A8BC35 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9A26BF21546444400A8BC35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9A26BF81546444400A8BC35 /* SenTestingKit.framework in Frameworks */,
+				C9A26BF91546444400A8BC35 /* UIKit.framework in Frameworks */,
+				C9A26BFA1546444400A8BC35 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C9A26BCA1546444400A8BC35 = {
+			isa = PBXGroup;
+			children = (
+				C9A26BDF1546444400A8BC35 /* LIRCMap */,
+				C9A26BFD1546444400A8BC35 /* LIRCMapTests */,
+				C9A26BD81546444400A8BC35 /* Frameworks */,
+				C9A26BD61546444400A8BC35 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C9A26BD61546444400A8BC35 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9A26BD51546444400A8BC35 /* LIRCMap.app */,
+				C9A26BF61546444400A8BC35 /* LIRCMapTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9A26BD81546444400A8BC35 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9A26BD91546444400A8BC35 /* UIKit.framework */,
+				C9A26BDB1546444400A8BC35 /* Foundation.framework */,
+				C9A26BDD1546444400A8BC35 /* CoreGraphics.framework */,
+				C9A26BF71546444400A8BC35 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9A26BDF1546444400A8BC35 /* LIRCMap */ = {
+			isa = PBXGroup;
+			children = (
+				C9A26BE81546444400A8BC35 /* HSVAppDelegate.h */,
+				C9A26BE91546444400A8BC35 /* HSVAppDelegate.m */,
+				C9A26BEB1546444400A8BC35 /* HSVViewController.h */,
+				C9A26BEC1546444400A8BC35 /* HSVViewController.m */,
+				C9A26BEE1546444400A8BC35 /* HSVViewController.xib */,
+				C9A26BE01546444400A8BC35 /* Supporting Files */,
+			);
+			path = LIRCMap;
+			sourceTree = "<group>";
+		};
+		C9A26BE01546444400A8BC35 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C9A26BE11546444400A8BC35 /* LIRCMap-Info.plist */,
+				C9A26BE21546444400A8BC35 /* InfoPlist.strings */,
+				C9A26BE51546444400A8BC35 /* main.m */,
+				C9A26BE71546444400A8BC35 /* LIRCMap-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C9A26BFD1546444400A8BC35 /* LIRCMapTests */ = {
+			isa = PBXGroup;
+			children = (
+				C9A26C031546444400A8BC35 /* LIRCMapTests.h */,
+				C9A26C041546444400A8BC35 /* LIRCMapTests.m */,
+				C9A26BFE1546444400A8BC35 /* Supporting Files */,
+			);
+			path = LIRCMapTests;
+			sourceTree = "<group>";
+		};
+		C9A26BFE1546444400A8BC35 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C9A26BFF1546444400A8BC35 /* LIRCMapTests-Info.plist */,
+				C9A26C001546444400A8BC35 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C9A26BD41546444400A8BC35 /* LIRCMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9A26C081546444400A8BC35 /* Build configuration list for PBXNativeTarget "LIRCMap" */;
+			buildPhases = (
+				C9A26BD11546444400A8BC35 /* Sources */,
+				C9A26BD21546444400A8BC35 /* Frameworks */,
+				C9A26BD31546444400A8BC35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LIRCMap;
+			productName = LIRCMap;
+			productReference = C9A26BD51546444400A8BC35 /* LIRCMap.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C9A26BF51546444400A8BC35 /* LIRCMapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9A26C0B1546444400A8BC35 /* Build configuration list for PBXNativeTarget "LIRCMapTests" */;
+			buildPhases = (
+				C9A26BF11546444400A8BC35 /* Sources */,
+				C9A26BF21546444400A8BC35 /* Frameworks */,
+				C9A26BF31546444400A8BC35 /* Resources */,
+				C9A26BF41546444400A8BC35 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9A26BFC1546444400A8BC35 /* PBXTargetDependency */,
+			);
+			name = LIRCMapTests;
+			productName = LIRCMapTests;
+			productReference = C9A26BF61546444400A8BC35 /* LIRCMapTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C9A26BCC1546444400A8BC35 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HSV;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = C9A26BCF1546444400A8BC35 /* Build configuration list for PBXProject "LIRCMap" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C9A26BCA1546444400A8BC35;
+			productRefGroup = C9A26BD61546444400A8BC35 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C9A26BD41546444400A8BC35 /* LIRCMap */,
+				C9A26BF51546444400A8BC35 /* LIRCMapTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C9A26BD31546444400A8BC35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9A26BE41546444400A8BC35 /* InfoPlist.strings in Resources */,
+				C9A26BF01546444400A8BC35 /* HSVViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9A26BF31546444400A8BC35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9A26C021546444400A8BC35 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C9A26BF41546444400A8BC35 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C9A26BD11546444400A8BC35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9A26BE61546444400A8BC35 /* main.m in Sources */,
+				C9A26BEA1546444400A8BC35 /* HSVAppDelegate.m in Sources */,
+				C9A26BED1546444400A8BC35 /* HSVViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9A26BF11546444400A8BC35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9A26C051546444400A8BC35 /* LIRCMapTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C9A26BFC1546444400A8BC35 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9A26BD41546444400A8BC35 /* LIRCMap */;
+			targetProxy = C9A26BFB1546444400A8BC35 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C9A26BE21546444400A8BC35 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9A26BE31546444400A8BC35 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C9A26BEE1546444400A8BC35 /* HSVViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9A26BEF1546444400A8BC35 /* en */,
+			);
+			name = HSVViewController.xib;
+			sourceTree = "<group>";
+		};
+		C9A26C001546444400A8BC35 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9A26C011546444400A8BC35 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C9A26C061546444400A8BC35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C9A26C071546444400A8BC35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C9A26C091546444400A8BC35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LIRCMap/LIRCMap-Prefix.pch";
+				INFOPLIST_FILE = "LIRCMap/LIRCMap-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C9A26C0A1546444400A8BC35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LIRCMap/LIRCMap-Prefix.pch";
+				INFOPLIST_FILE = "LIRCMap/LIRCMap-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C9A26C0C1546444400A8BC35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LIRCMap.app/LIRCMap";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LIRCMap/LIRCMap-Prefix.pch";
+				INFOPLIST_FILE = "LIRCMapTests/LIRCMapTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		C9A26C0D1546444400A8BC35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LIRCMap.app/LIRCMap";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LIRCMap/LIRCMap-Prefix.pch";
+				INFOPLIST_FILE = "LIRCMapTests/LIRCMapTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C9A26BCF1546444400A8BC35 /* Build configuration list for PBXProject "LIRCMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9A26C061546444400A8BC35 /* Debug */,
+				C9A26C071546444400A8BC35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9A26C081546444400A8BC35 /* Build configuration list for PBXNativeTarget "LIRCMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9A26C091546444400A8BC35 /* Debug */,
+				C9A26C0A1546444400A8BC35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C9A26C0B1546444400A8BC35 /* Build configuration list for PBXNativeTarget "LIRCMapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9A26C0C1546444400A8BC35 /* Debug */,
+				C9A26C0D1546444400A8BC35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C9A26BCC1546444400A8BC35 /* Project object */;
+}
