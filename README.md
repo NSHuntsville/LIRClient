@@ -1,4 +1,0 @@
-LIRC
-====
-
-Location Based IRC
