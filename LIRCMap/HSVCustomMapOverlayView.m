@@ -3,7 +3,6 @@
 //  LIRCMap
 //
 //  Created by Matt Blackmon on 4/23/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
 
@@ -26,7 +25,6 @@
         CGContextSetFillColorWithColor(context, [[UIColor blueColor] colorWithAlphaComponent:0.4].CGColor);
         CGContextFillRect(context, drawSpace);
     } else {
-        NSLog(@"got intersection");
         CGContextSetFillColorWithColor(context, [[UIColor blueColor] colorWithAlphaComponent:0.4].CGColor);
         CGContextFillRect(context, drawSpace);
 
