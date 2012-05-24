@@ -8,6 +8,7 @@
 #import <MapKit/MapKit.h>
 #import "HSVViewController.h"
 #import "HSVCustomMapOverlayView.h"
+#import "AFNetworking.h"
 
 @interface HSVViewController ()
 @property(nonatomic, strong) CLLocationManager *coreLocationManager;
@@ -51,7 +52,26 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self.mapView setShowsUserLocation:YES];
+    //JSON initialization
+    NSURL *url = [[NSURL alloc] initWithString:@"http://localhost:3000"];
+    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url ] ;
+    [httpClient setDefaultHeader:@"Content-Type" value:@"application/json" ];
+    [httpClient setDefaultHeader:@"Accept" value:@"*/*"];
+    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
+                            @"rmillerx", @"twitter_username",
+                            nil];
+    NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST" path:@"/users" parameters:params];
+    
+    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        NSLog(@"username: %@, access_token: %@", [JSON objectForKey:@"twitter_username"], [JSON objectForKey:@"access_token"]);
 
+        
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        NSLog(@"Request Failed with Error: %@, %@", error, error.userInfo);
+    }];
+    
+    [operation start];
+    
 
 }
 
