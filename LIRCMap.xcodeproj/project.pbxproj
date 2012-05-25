@@ -33,6 +33,8 @@
 		C9C5B267156D39A800E28EB8 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C5B25B156D39A800E28EB8 /* AFURLConnectionOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C9C5B268156D39A800E28EB8 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C5B25D156D39A800E28EB8 /* AFXMLRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C9C5B269156D39A800E28EB8 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C5B25F156D39A800E28EB8 /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9D967EF15700BFC004D2309 /* LIRCStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9D967EE15700BFC004D2309 /* LIRCStoryboard.storyboard */; };
+		C9D967F3157015D5004D2309 /* TitleScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D967F2157015D5004D2309 /* TitleScreen.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,8 @@
 		C9C5B25D156D39A800E28EB8 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		C9C5B25E156D39A800E28EB8 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		C9C5B25F156D39A800E28EB8 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		C9D967EE15700BFC004D2309 /* LIRCStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LIRCStoryboard.storyboard; sourceTree = "<group>"; };
+		C9D967F2157015D5004D2309 /* TitleScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TitleScreen.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +157,7 @@
 		C9A26BDF1546444400A8BC35 /* LIRCMap */ = {
 			isa = PBXGroup;
 			children = (
+				C9D967F1157015BE004D2309 /* Resources */,
 				C9C5B24A156D39A800E28EB8 /* AFNetworking */,
 				C9A26BE81546444400A8BC35 /* HSVAppDelegate.h */,
 				C9A26BE91546444400A8BC35 /* HSVAppDelegate.m */,
@@ -162,6 +167,7 @@
 				C9A26C121546622B00A8BC35 /* HSVCustomMapOverlayView.h */,
 				C9A26C131546622B00A8BC35 /* HSVCustomMapOverlayView.m */,
 				C9A26BE01546444400A8BC35 /* Supporting Files */,
+				C9D967EE15700BFC004D2309 /* LIRCStoryboard.storyboard */,
 			);
 			path = LIRCMap;
 			sourceTree = "<group>";
@@ -222,6 +228,14 @@
 				C9C5B25F156D39A800E28EB8 /* UIImageView+AFNetworking.m */,
 			);
 			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		C9D967F1157015BE004D2309 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C9D967F2157015D5004D2309 /* TitleScreen.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,6 +311,8 @@
 			files = (
 				C9A26BE41546444400A8BC35 /* InfoPlist.strings in Resources */,
 				C9A26BF01546444400A8BC35 /* HSVViewController.xib in Resources */,
+				C9D967EF15700BFC004D2309 /* LIRCStoryboard.storyboard in Resources */,
+				C9D967F3157015D5004D2309 /* TitleScreen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
