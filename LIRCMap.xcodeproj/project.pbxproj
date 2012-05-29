@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C931E3581575103800C9AA23 /* HSVPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C931E3571575103800C9AA23 /* HSVPostViewController.m */; };
 		C9A26BDA1546444400A8BC35 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A26BD91546444400A8BC35 /* UIKit.framework */; };
 		C9A26BDC1546444400A8BC35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A26BDB1546444400A8BC35 /* Foundation.framework */; };
 		C9A26BDE1546444400A8BC35 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A26BDD1546444400A8BC35 /* CoreGraphics.framework */; };
@@ -14,7 +15,6 @@
 		C9A26BE61546444400A8BC35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A26BE51546444400A8BC35 /* main.m */; };
 		C9A26BEA1546444400A8BC35 /* HSVAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A26BE91546444400A8BC35 /* HSVAppDelegate.m */; };
 		C9A26BED1546444400A8BC35 /* HSVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A26BEC1546444400A8BC35 /* HSVViewController.m */; };
-		C9A26BF01546444400A8BC35 /* HSVViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9A26BEE1546444400A8BC35 /* HSVViewController.xib */; };
 		C9A26BF81546444400A8BC35 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A26BF71546444400A8BC35 /* SenTestingKit.framework */; };
 		C9A26BF91546444400A8BC35 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A26BD91546444400A8BC35 /* UIKit.framework */; };
 		C9A26BFA1546444400A8BC35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A26BDB1546444400A8BC35 /* Foundation.framework */; };
@@ -23,6 +23,20 @@
 		C9A26C0F1546452600A8BC35 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A26C0E1546452600A8BC35 /* MapKit.framework */; };
 		C9A26C111546465A00A8BC35 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A26C101546465A00A8BC35 /* CoreLocation.framework */; };
 		C9A26C141546622B00A8BC35 /* HSVCustomMapOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A26C131546622B00A8BC35 /* HSVCustomMapOverlayView.m */; };
+		C9B14606157280280071438A /* HSVLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B14605157280280071438A /* HSVLoginViewController.m */; };
+		C9C5B260156D39A800E28EB8 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C5B24C156D39A800E28EB8 /* AFHTTPClient.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9C5B261156D39A800E28EB8 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C5B24E156D39A800E28EB8 /* AFHTTPRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9C5B262156D39A800E28EB8 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C5B250156D39A800E28EB8 /* AFImageRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9C5B263156D39A800E28EB8 /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C5B252156D39A800E28EB8 /* AFJSONRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9C5B264156D39A800E28EB8 /* AFJSONUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C5B254156D39A800E28EB8 /* AFJSONUtilities.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9C5B265156D39A800E28EB8 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C5B256156D39A800E28EB8 /* AFNetworkActivityIndicatorManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9C5B266156D39A800E28EB8 /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C5B259156D39A800E28EB8 /* AFPropertyListRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9C5B267156D39A800E28EB8 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C5B25B156D39A800E28EB8 /* AFURLConnectionOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9C5B268156D39A800E28EB8 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C5B25D156D39A800E28EB8 /* AFXMLRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9C5B269156D39A800E28EB8 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C5B25F156D39A800E28EB8 /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9D967EF15700BFC004D2309 /* LIRCStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9D967EE15700BFC004D2309 /* LIRCStoryboard.storyboard */; };
+		C9D967F3157015D5004D2309 /* TitleScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D967F2157015D5004D2309 /* TitleScreen.png */; };
+		C9D967F3157015D5004D230B /* HSVJSONHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D967F3157015D5004D230A /* HSVJSONHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C931E3561575103800C9AA23 /* HSVPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSVPostViewController.h; sourceTree = "<group>"; };
+		C931E3571575103800C9AA23 /* HSVPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSVPostViewController.m; sourceTree = "<group>"; };
 		C9A26BD51546444400A8BC35 /* LIRCMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LIRCMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9A26BD91546444400A8BC35 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C9A26BDB1546444400A8BC35 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -48,7 +64,6 @@
 		C9A26BE91546444400A8BC35 /* HSVAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSVAppDelegate.m; sourceTree = "<group>"; };
 		C9A26BEB1546444400A8BC35 /* HSVViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HSVViewController.h; sourceTree = "<group>"; };
 		C9A26BEC1546444400A8BC35 /* HSVViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSVViewController.m; sourceTree = "<group>"; };
-		C9A26BEF1546444400A8BC35 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HSVViewController.xib; sourceTree = "<group>"; };
 		C9A26BF61546444400A8BC35 /* LIRCMapTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LIRCMapTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9A26BF71546444400A8BC35 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		C9A26BFF1546444400A8BC35 /* LIRCMapTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LIRCMapTests-Info.plist"; sourceTree = "<group>"; };
@@ -59,6 +74,33 @@
 		C9A26C101546465A00A8BC35 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C9A26C121546622B00A8BC35 /* HSVCustomMapOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSVCustomMapOverlayView.h; sourceTree = "<group>"; };
 		C9A26C131546622B00A8BC35 /* HSVCustomMapOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSVCustomMapOverlayView.m; sourceTree = "<group>"; };
+		C9B14604157280280071438A /* HSVLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSVLoginViewController.h; sourceTree = "<group>"; };
+		C9B14605157280280071438A /* HSVLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSVLoginViewController.m; sourceTree = "<group>"; };
+		C9C5B24B156D39A800E28EB8 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
+		C9C5B24C156D39A800E28EB8 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
+		C9C5B24D156D39A800E28EB8 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		C9C5B24E156D39A800E28EB8 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		C9C5B24F156D39A800E28EB8 /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
+		C9C5B250156D39A800E28EB8 /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageRequestOperation.m; sourceTree = "<group>"; };
+		C9C5B251156D39A800E28EB8 /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		C9C5B252156D39A800E28EB8 /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONRequestOperation.m; sourceTree = "<group>"; };
+		C9C5B253156D39A800E28EB8 /* AFJSONUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONUtilities.h; sourceTree = "<group>"; };
+		C9C5B254156D39A800E28EB8 /* AFJSONUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONUtilities.m; sourceTree = "<group>"; };
+		C9C5B255156D39A800E28EB8 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		C9C5B256156D39A800E28EB8 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		C9C5B257156D39A800E28EB8 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		C9C5B258156D39A800E28EB8 /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
+		C9C5B259156D39A800E28EB8 /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
+		C9C5B25A156D39A800E28EB8 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		C9C5B25B156D39A800E28EB8 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		C9C5B25C156D39A800E28EB8 /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		C9C5B25D156D39A800E28EB8 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
+		C9C5B25E156D39A800E28EB8 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		C9C5B25F156D39A800E28EB8 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		C9D967EE15700BFC004D2309 /* LIRCStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LIRCStoryboard.storyboard; sourceTree = "<group>"; };
+		C9D967F2157015D5004D2309 /* TitleScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TitleScreen.png; sourceTree = "<group>"; };
+		C9D967F3157015D5004D230A /* HSVJSONHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSVJSONHelper.m; sourceTree = "<group>"; };
+		C9D967F3157015D5004D230C /* HSVJSONHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSVJSONHelper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +135,7 @@
 				C9A26C101546465A00A8BC35 /* CoreLocation.framework */,
 				C9A26C0E1546452600A8BC35 /* MapKit.framework */,
 				C9A26BDF1546444400A8BC35 /* LIRCMap */,
+				C9C5B24A156D39A800E28EB8 /* AFNetworking */,
 				C9A26BFD1546444400A8BC35 /* LIRCMapTests */,
 				C9A26BD81546444400A8BC35 /* Frameworks */,
 				C9A26BD61546444400A8BC35 /* Products */,
@@ -122,13 +165,20 @@
 		C9A26BDF1546444400A8BC35 /* LIRCMap */ = {
 			isa = PBXGroup;
 			children = (
+				C9D967F3157015D5004D230C /* HSVJSONHelper.h */,
+				C9D967F3157015D5004D230A /* HSVJSONHelper.m */,
 				C9A26BE81546444400A8BC35 /* HSVAppDelegate.h */,
 				C9A26BE91546444400A8BC35 /* HSVAppDelegate.m */,
 				C9A26BEB1546444400A8BC35 /* HSVViewController.h */,
 				C9A26BEC1546444400A8BC35 /* HSVViewController.m */,
-				C9A26BEE1546444400A8BC35 /* HSVViewController.xib */,
 				C9A26C121546622B00A8BC35 /* HSVCustomMapOverlayView.h */,
 				C9A26C131546622B00A8BC35 /* HSVCustomMapOverlayView.m */,
+				C9B14604157280280071438A /* HSVLoginViewController.h */,
+				C9B14605157280280071438A /* HSVLoginViewController.m */,
+				C931E3561575103800C9AA23 /* HSVPostViewController.h */,
+				C931E3571575103800C9AA23 /* HSVPostViewController.m */,
+				C9D967EE15700BFC004D2309 /* LIRCStoryboard.storyboard */,
+				C9D967F1157015BE004D2309 /* Resources */,
 				C9A26BE01546444400A8BC35 /* Supporting Files */,
 			);
 			path = LIRCMap;
@@ -162,6 +212,43 @@
 				C9A26C001546444400A8BC35 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C9C5B24A156D39A800E28EB8 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				C9C5B24B156D39A800E28EB8 /* AFHTTPClient.h */,
+				C9C5B24C156D39A800E28EB8 /* AFHTTPClient.m */,
+				C9C5B24D156D39A800E28EB8 /* AFHTTPRequestOperation.h */,
+				C9C5B24E156D39A800E28EB8 /* AFHTTPRequestOperation.m */,
+				C9C5B24F156D39A800E28EB8 /* AFImageRequestOperation.h */,
+				C9C5B250156D39A800E28EB8 /* AFImageRequestOperation.m */,
+				C9C5B251156D39A800E28EB8 /* AFJSONRequestOperation.h */,
+				C9C5B252156D39A800E28EB8 /* AFJSONRequestOperation.m */,
+				C9C5B253156D39A800E28EB8 /* AFJSONUtilities.h */,
+				C9C5B254156D39A800E28EB8 /* AFJSONUtilities.m */,
+				C9C5B255156D39A800E28EB8 /* AFNetworkActivityIndicatorManager.h */,
+				C9C5B256156D39A800E28EB8 /* AFNetworkActivityIndicatorManager.m */,
+				C9C5B257156D39A800E28EB8 /* AFNetworking.h */,
+				C9C5B258156D39A800E28EB8 /* AFPropertyListRequestOperation.h */,
+				C9C5B259156D39A800E28EB8 /* AFPropertyListRequestOperation.m */,
+				C9C5B25A156D39A800E28EB8 /* AFURLConnectionOperation.h */,
+				C9C5B25B156D39A800E28EB8 /* AFURLConnectionOperation.m */,
+				C9C5B25C156D39A800E28EB8 /* AFXMLRequestOperation.h */,
+				C9C5B25D156D39A800E28EB8 /* AFXMLRequestOperation.m */,
+				C9C5B25E156D39A800E28EB8 /* UIImageView+AFNetworking.h */,
+				C9C5B25F156D39A800E28EB8 /* UIImageView+AFNetworking.m */,
+			);
+			name = AFNetworking;
+			path = LIRCMap/AFNetworking;
+			sourceTree = "<group>";
+		};
+		C9D967F1157015BE004D2309 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C9D967F2157015D5004D2309 /* TitleScreen.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +323,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9A26BE41546444400A8BC35 /* InfoPlist.strings in Resources */,
-				C9A26BF01546444400A8BC35 /* HSVViewController.xib in Resources */,
+				C9D967EF15700BFC004D2309 /* LIRCStoryboard.storyboard in Resources */,
+				C9D967F3157015D5004D2309 /* TitleScreen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +363,19 @@
 				C9A26BEA1546444400A8BC35 /* HSVAppDelegate.m in Sources */,
 				C9A26BED1546444400A8BC35 /* HSVViewController.m in Sources */,
 				C9A26C141546622B00A8BC35 /* HSVCustomMapOverlayView.m in Sources */,
+				C9C5B260156D39A800E28EB8 /* AFHTTPClient.m in Sources */,
+				C9C5B261156D39A800E28EB8 /* AFHTTPRequestOperation.m in Sources */,
+				C9C5B262156D39A800E28EB8 /* AFImageRequestOperation.m in Sources */,
+				C9C5B263156D39A800E28EB8 /* AFJSONRequestOperation.m in Sources */,
+				C9C5B264156D39A800E28EB8 /* AFJSONUtilities.m in Sources */,
+				C9C5B265156D39A800E28EB8 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				C9C5B266156D39A800E28EB8 /* AFPropertyListRequestOperation.m in Sources */,
+				C9C5B267156D39A800E28EB8 /* AFURLConnectionOperation.m in Sources */,
+				C9C5B268156D39A800E28EB8 /* AFXMLRequestOperation.m in Sources */,
+				C9C5B269156D39A800E28EB8 /* UIImageView+AFNetworking.m in Sources */,
+				C9B14606157280280071438A /* HSVLoginViewController.m in Sources */,
+				C9D967F3157015D5004D230B /* HSVJSONHelper.m in Sources */,
+				C931E3581575103800C9AA23 /* HSVPostViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,14 +404,6 @@
 				C9A26BE31546444400A8BC35 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		C9A26BEE1546444400A8BC35 /* HSVViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C9A26BEF1546444400A8BC35 /* en */,
-			);
-			name = HSVViewController.xib;
 			sourceTree = "<group>";
 		};
 		C9A26C001546444400A8BC35 /* InfoPlist.strings */ = {
@@ -444,6 +537,7 @@
 				C9A26C0A1546444400A8BC35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C9A26C0B1546444400A8BC35 /* Build configuration list for PBXNativeTarget "LIRCMapTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +546,7 @@
 				C9A26C0D1546444400A8BC35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

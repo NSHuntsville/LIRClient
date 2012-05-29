@@ -8,16 +8,17 @@
 #import <MapKit/MapKit.h>
 #import "HSVViewController.h"
 #import "HSVCustomMapOverlayView.h"
+#import "AFNetworking.h"
+#import "HSVPostViewController.h"
 
 @interface HSVViewController ()
 @property(nonatomic, strong) CLLocationManager *coreLocationManager;
 @property(nonatomic, strong) CLLocation *lastLocation;
+@property(nonatomic, strong) MKCircle *overlay;
 @property(nonatomic, assign) double lastLocationTolerance;
+@property(nonatomic, strong) HSVJSONHelper *jsonHelper;
 
 - (BOOL)isOutsideLastLocation:(CLLocation *)location;
-
-@property(nonatomic, strong) MKCircle *overlay;
-
 
 @end
 
@@ -27,10 +28,15 @@
 @synthesize lastLocation = _lastLocation;
 @synthesize lastLocationTolerance = _lastLocationTolerance;
 @synthesize overlay = _overlay;
+@synthesize loginName = _loginName;
+@synthesize accessToken = _accessToken;
+@synthesize jsonHelper = _jsonHelper;
 
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+	// Do any additional setup after loading the view, typically from a nib.
     if (self) {
         self.coreLocationManager = [[CLLocationManager alloc] init];
         [self.coreLocationManager setDelegate:self];
@@ -40,19 +46,9 @@
         self.lastLocation = nil;
         self.lastLocationTolerance = 0.001;  //in degrees this about 300 feet, depending on distance from equator (thanks wolfram alpha)
     }
-
-    return self;
-//To change the template use AppCode | Preferences | File Templates.
-}
-
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
     [self.mapView setShowsUserLocation:YES];
-
-
+    [self setJsonHelper:[[HSVJSONHelper alloc] init]];
+    NSLog(@"HSVViewController- Username: %@  Acccess Token: %@",[self loginName], [self accessToken] );
 }
 
 - (void)viewDidUnload
@@ -119,5 +115,16 @@
     return NO;
 }
 
-
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"PostView"]) {
+        HSVPostViewController *postVC = [segue destinationViewController];  
+        postVC.loginName = [self loginName];
+        postVC.accessToken = [self accessToken];
+        postVC.latitude = self.lastLocation.coordinate.latitude;
+        postVC.longitude = self.lastLocation.coordinate.longitude;        
+    }
+}
+- (IBAction)postBtn:(id)sender {
+    [self performSegueWithIdentifier:@"PostView" sender:self];
+}
 @end

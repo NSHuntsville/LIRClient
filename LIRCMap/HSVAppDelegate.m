@@ -16,11 +16,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    //UINavigationController *rootNavigationController = (UINavigationController *)self.window.rootViewController;
+    // HSVViewController *myViewController = (HSVViewController *)[rootNavigationController topViewController];
+    
+    //self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[HSVViewController alloc] initWithNibName:@"HSVViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
-    [self.window makeKeyAndVisible];
+    //self.viewController = [[HSVViewController alloc] initWithNibName:@"HSVViewController" bundle:nil];
+    //self.window.rootViewController = self.viewController;
+    //[self.window makeKeyAndVisible];
     return YES;
 }
 
