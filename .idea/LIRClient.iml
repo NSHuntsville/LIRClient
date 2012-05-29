@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="CIDR_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$USER_HOME$/Library/Caches/appCode10/DerivedData/LIRCMap-a2032580/Build/Products/Debug-iphonesimulator/LIRCMap.app">
-      <sourceFolder url="file://$USER_HOME$/Library/Caches/appCode10/DerivedData/LIRCMap-a2032580/Build/Products/Debug-iphonesimulator/LIRCMap.app" isTestSource="false" />
-    </content>
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
     </content>

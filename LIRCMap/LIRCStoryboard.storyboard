@@ -6,11 +6,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Login Screen-->
+        <!--Login View Controller - Login Screen-->
         <scene sceneID="dIL-py-wdB">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IZl-mq-ze8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController title="Login Screen" id="Ouz-W4-Sen" sceneMemberID="viewController">
+                <viewController title="Login Screen" id="Ouz-W4-Sen" customClass="HSVLoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vyw-X2-ULK">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -31,14 +31,14 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Gke-Sm-q4w" kind="push" id="swJ-p4-AaK"/>
+                                    <action selector="loginBtn:" destination="Ouz-W4-Sen" eventType="touchUpInside" id="jil-ZC-Cnb"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="LIRC name" minimumFontSize="17" id="Pc4-v4-Ch9">
                                 <rect key="frame" x="20" y="328" width="188" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="go"/>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="LIRC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" id="WE3-Og-hai">
                                 <rect key="frame" x="20" y="367" width="69" height="29"/>
@@ -58,6 +58,10 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="m83-vR-67V"/>
+                    <connections>
+                        <outlet property="loginField" destination="Pc4-v4-Ch9" id="4YI-KD-RRM"/>
+                        <segue destination="Gke-Sm-q4w" kind="push" identifier="seeMap" id="1pG-Sj-5Yl"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="294" y="6"/>
@@ -82,12 +86,17 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JxR-mV-8ac" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Gke-Sm-q4w" customClass="HSVViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="680-QZ-zcN">
+                    <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="OEa-xJ-19B">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <connections>
+                            <outlet property="delegate" destination="Gke-Sm-q4w" id="Ntw-Ak-bCY"/>
+                        </connections>
+                    </mapView>
                     <navigationItem key="navigationItem" id="8Vl-3g-qv4"/>
+                    <connections>
+                        <outlet property="mapView" destination="OEa-xJ-19B" id="0zc-OP-gwz"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="734" y="6"/>
@@ -96,6 +105,21 @@
     <resources>
         <image name="TitleScreen.png" width="320" height="290"/>
     </resources>
+    <classes>
+        <class className="HSVLoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HSVLoginViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="loginBtn:"/>
+                <relationship kind="outlet" name="loginName" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="HSVViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HSVViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

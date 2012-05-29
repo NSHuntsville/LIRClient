@@ -14,7 +14,7 @@
 @property(nonatomic, strong) CLLocationManager *coreLocationManager;
 @property(nonatomic, strong) CLLocation *lastLocation;
 @property(nonatomic, assign) double lastLocationTolerance;
-
+@property(nonatomic, strong) HSVJSONHelper *jsonHelper;
 - (BOOL)isOutsideLastLocation:(CLLocation *)location;
 
 @property(nonatomic, strong) MKCircle *overlay;
@@ -28,20 +28,13 @@
 @synthesize lastLocation = _lastLocation;
 @synthesize lastLocationTolerance = _lastLocationTolerance;
 @synthesize overlay = _overlay;
+@synthesize loginName = _loginName;
+@synthesize accessToken = _accessToken;
+@synthesize jsonHelper = _jsonHelper;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        self.coreLocationManager = [[CLLocationManager alloc] init];
-        [self.coreLocationManager setDelegate:self];
-        [self.coreLocationManager setDistanceFilter:kCLDistanceFilterNone];
-        [self.coreLocationManager setDesiredAccuracy:kCLLocationAccuracyBest];
-        [self.coreLocationManager startUpdatingLocation];
-        self.lastLocation = nil;
-        self.lastLocationTolerance = 0.001;  //in degrees this about 300 feet, depending on distance from equator (thanks wolfram alpha)
-    }
-
     return self;
 //To change the template use AppCode | Preferences | File Templates.
 }
@@ -51,28 +44,18 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    if (self) {
+        self.coreLocationManager = [[CLLocationManager alloc] init];
+        [self.coreLocationManager setDelegate:self];
+        [self.coreLocationManager setDistanceFilter:kCLDistanceFilterNone];
+        [self.coreLocationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+        [self.coreLocationManager startUpdatingLocation];
+        self.lastLocation = nil;
+        self.lastLocationTolerance = 0.001;  //in degrees this about 300 feet, depending on distance from equator (thanks wolfram alpha)
+    }
     [self.mapView setShowsUserLocation:YES];
-    //JSON initialization
-    NSURL *url = [[NSURL alloc] initWithString:@"http://localhost:3000"];
-    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url ] ;
-    [httpClient setDefaultHeader:@"Content-Type" value:@"application/json" ];
-    [httpClient setDefaultHeader:@"Accept" value:@"*/*"];
-    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
-                            @"rmillerx", @"twitter_username",
-                            nil];
-    NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST" path:@"/users" parameters:params];
-    
-    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-        NSLog(@"username: %@, access_token: %@", [JSON objectForKey:@"twitter_username"], [JSON objectForKey:@"access_token"]);
-
-        
-    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-        NSLog(@"Request Failed with Error: %@, %@", error, error.userInfo);
-    }];
-    
-    [operation start];
-    
-
+    [self setJsonHelper:[[HSVJSONHelper alloc] init]];
+    NSLog(@"HSVViewController- Username: %@  Acccess Token: %@",[self loginName], [self accessToken] );
 }
 
 - (void)viewDidUnload
@@ -122,6 +105,9 @@
         [mapView removeOverlay:self.overlay];
         self.overlay = circle;
         [mapView addOverlay:self.overlay];
+        //post a sample message in lieu of a real Message dialog
+        // UNCOMMENT FOR EXAMPLE POSTING
+        //[[self jsonHelper] sendCommentForLat:newLocation.coordinate.latitude longitude:newLocation.coordinate.longitude comment:@"First Post- Woot" forUser:[self loginName] tokenID:[self accessToken] callingFunction:self];
     }
 }
 
@@ -138,6 +124,21 @@
     }
     return NO;
 }
-
+/*
+ * 
+ */
+-(void)messagePosted:(NSString *)message {
+    if(message) {
+        NSLog(@"The message %@ was posted" , message);
+    } else {
+        NSLog(@"An Error occurred while posting the message");
+    }
+}
+-(void)messagesReceived:(NSArray *)messagesArray {
+    if(messagesArray) {
+        NSLog(@"Received messages for this location");
+        NSLog(@"%@", messagesArray);
+    }
+}
 
 @end

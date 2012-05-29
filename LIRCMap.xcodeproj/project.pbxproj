@@ -23,6 +23,7 @@
 		C9A26C0F1546452600A8BC35 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A26C0E1546452600A8BC35 /* MapKit.framework */; };
 		C9A26C111546465A00A8BC35 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A26C101546465A00A8BC35 /* CoreLocation.framework */; };
 		C9A26C141546622B00A8BC35 /* HSVCustomMapOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A26C131546622B00A8BC35 /* HSVCustomMapOverlayView.m */; };
+		C9B14606157280280071438A /* HSVLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B14605157280280071438A /* HSVLoginViewController.m */; };
 		C9C5B260156D39A800E28EB8 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C5B24C156D39A800E28EB8 /* AFHTTPClient.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C9C5B261156D39A800E28EB8 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C5B24E156D39A800E28EB8 /* AFHTTPRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C9C5B262156D39A800E28EB8 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C5B250156D39A800E28EB8 /* AFImageRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -35,6 +36,7 @@
 		C9C5B269156D39A800E28EB8 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C5B25F156D39A800E28EB8 /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C9D967EF15700BFC004D2309 /* LIRCStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9D967EE15700BFC004D2309 /* LIRCStoryboard.storyboard */; };
 		C9D967F3157015D5004D2309 /* TitleScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D967F2157015D5004D2309 /* TitleScreen.png */; };
+		C9D967F3157015D5004D230B /* HSVJSONHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D967F3157015D5004D230A /* HSVJSONHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		C9A26C101546465A00A8BC35 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C9A26C121546622B00A8BC35 /* HSVCustomMapOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSVCustomMapOverlayView.h; sourceTree = "<group>"; };
 		C9A26C131546622B00A8BC35 /* HSVCustomMapOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSVCustomMapOverlayView.m; sourceTree = "<group>"; };
+		C9B14604157280280071438A /* HSVLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSVLoginViewController.h; sourceTree = "<group>"; };
+		C9B14605157280280071438A /* HSVLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSVLoginViewController.m; sourceTree = "<group>"; };
 		C9C5B24B156D39A800E28EB8 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		C9C5B24C156D39A800E28EB8 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		C9C5B24D156D39A800E28EB8 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -94,6 +98,8 @@
 		C9C5B25F156D39A800E28EB8 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		C9D967EE15700BFC004D2309 /* LIRCStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LIRCStoryboard.storyboard; sourceTree = "<group>"; };
 		C9D967F2157015D5004D2309 /* TitleScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TitleScreen.png; sourceTree = "<group>"; };
+		C9D967F3157015D5004D230A /* HSVJSONHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSVJSONHelper.m; sourceTree = "<group>"; };
+		C9D967F3157015D5004D230C /* HSVJSONHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSVJSONHelper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +163,8 @@
 		C9A26BDF1546444400A8BC35 /* LIRCMap */ = {
 			isa = PBXGroup;
 			children = (
+				C9D967F3157015D5004D230C /* HSVJSONHelper.h */,
+				C9D967F3157015D5004D230A /* HSVJSONHelper.m */,
 				C9D967F1157015BE004D2309 /* Resources */,
 				C9C5B24A156D39A800E28EB8 /* AFNetworking */,
 				C9A26BE81546444400A8BC35 /* HSVAppDelegate.h */,
@@ -166,8 +174,10 @@
 				C9A26BEE1546444400A8BC35 /* HSVViewController.xib */,
 				C9A26C121546622B00A8BC35 /* HSVCustomMapOverlayView.h */,
 				C9A26C131546622B00A8BC35 /* HSVCustomMapOverlayView.m */,
-				C9A26BE01546444400A8BC35 /* Supporting Files */,
+				C9B14604157280280071438A /* HSVLoginViewController.h */,
+				C9B14605157280280071438A /* HSVLoginViewController.m */,
 				C9D967EE15700BFC004D2309 /* LIRCStoryboard.storyboard */,
+				C9A26BE01546444400A8BC35 /* Supporting Files */,
 			);
 			path = LIRCMap;
 			sourceTree = "<group>";
@@ -361,6 +371,8 @@
 				C9C5B267156D39A800E28EB8 /* AFURLConnectionOperation.m in Sources */,
 				C9C5B268156D39A800E28EB8 /* AFXMLRequestOperation.m in Sources */,
 				C9C5B269156D39A800E28EB8 /* UIImageView+AFNetworking.m in Sources */,
+				C9B14606157280280071438A /* HSVLoginViewController.m in Sources */,
+				C9D967F3157015D5004D230B /* HSVJSONHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
