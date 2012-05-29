@@ -54,7 +54,7 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     [[self jsonHelper] getAuthorizationCredentialsForName:loginField.text callingFunction:(id <JSONHelper>)self];
-    
+    //Insert some whiz-bang animation here
     return YES;
 }
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
