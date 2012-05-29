@@ -53,9 +53,27 @@
 }
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
+    [[self jsonHelper] getAuthorizationCredentialsForName:loginField.text callingFunction:(id <JSONHelper>)self];
+    
     return YES;
 }
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    [UIView beginAnimations:nil context:NULL];
+	[UIView setAnimationDelegate:self];
+	[UIView setAnimationDuration:0.5];
+	[UIView setAnimationBeginsFromCurrentState:YES];
+	textField.frame = CGRectMake(textField.frame.origin.x, (textField.frame.origin.y - 200.0), textField.frame.size.width, textField.frame.size.height);
+	[UIView commitAnimations];
+}
 
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    [UIView beginAnimations:nil context:NULL];
+	[UIView setAnimationDelegate:self];
+	[UIView setAnimationDuration:0.5];
+	[UIView setAnimationBeginsFromCurrentState:YES];
+	textField.frame = CGRectMake(textField.frame.origin.x, (textField.frame.origin.y + 200.0), textField.frame.size.width, textField.frame.size.height);
+	[UIView commitAnimations];
+}
 - (IBAction)loginBtn:(id)sender {
     [[self jsonHelper] getAuthorizationCredentialsForName:loginField.text callingFunction:(id <JSONHelper>)self];
 }

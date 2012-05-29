@@ -14,4 +14,5 @@
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (strong, nonatomic) NSString * loginName;
 @property (strong, nonatomic) NSString * accessToken;
+- (IBAction)postBtn:(id)sender;
 @end

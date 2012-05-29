@@ -81,25 +81,120 @@
             </objects>
             <point key="canvasLocation" x="-247" y="436"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - seeMap-->
         <scene sceneID="urz-MP-hjU">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JxR-mV-8ac" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="Gke-Sm-q4w" customClass="HSVViewController" sceneMemberID="viewController">
-                    <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="OEa-xJ-19B">
+                <viewController title="seeMap" id="Gke-Sm-q4w" customClass="HSVViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2wM-PS-89f">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <connections>
-                            <outlet property="delegate" destination="Gke-Sm-q4w" id="Ntw-Ak-bCY"/>
-                        </connections>
-                    </mapView>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="0oi-kU-iO8">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="350"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Gke-Sm-q4w" id="zT8-Cl-Sse"/>
+                                </connections>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NRc-rL-lEt">
+                                <rect key="frame" x="20" y="359" width="129" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Post a Comment">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="postBtn:" destination="Gke-Sm-q4w" eventType="touchUpInside" id="wzE-gD-bxW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="TaC-ab-Byw">
+                                <rect key="frame" x="166" y="359" width="134" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Show Comments">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.098039217293262482" green="0.098039217293262482" blue="0.098039217293262482" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
                     <navigationItem key="navigationItem" id="8Vl-3g-qv4"/>
                     <connections>
-                        <outlet property="mapView" destination="OEa-xJ-19B" id="0zc-OP-gwz"/>
+                        <outlet property="mapView" destination="0oi-kU-iO8" id="Wut-Dq-5aR"/>
+                        <segue destination="1xp-wv-lSV" kind="push" identifier="PostView" id="uhG-b4-XhQ"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="734" y="6"/>
+            <point key="canvasLocation" x="826" y="12"/>
+        </scene>
+        <!--Post View Controller - PostView-->
+        <scene sceneID="KCf-cL-1XA">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Joo-ik-Xmi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController title="PostView" id="1xp-wv-lSV" customClass="HSVPostViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2hq-2E-vEH">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Post a comment about anything you want.  People LIRCing in this area can view your comments" id="zHu-3Y-X8R">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="230"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="1xp-wv-lSV" id="Qyy-MF-w19"/>
+                                </connections>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aof-T5-a90">
+                                <rect key="frame" x="20" y="359" width="114" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Post It!">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="postItBtn:" destination="1xp-wv-lSV" eventType="touchUpInside" id="4hD-nh-6NT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yTc-dY-6R9">
+                                <rect key="frame" x="200" y="359" width="100" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelBtn:" destination="1xp-wv-lSV" eventType="touchUpInside" id="PBP-cr-g6A"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WCV-2Z-unO"/>
+                    <connections>
+                        <outlet property="messageTextView" destination="zHu-3Y-X8R" id="oKU-5y-x7M"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1305" y="11"/>
         </scene>
     </scenes>
     <resources>
@@ -110,12 +205,21 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HSVLoginViewController.h"/>
             <relationships>
                 <relationship kind="action" name="loginBtn:"/>
-                <relationship kind="outlet" name="loginName" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="loginField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="HSVPostViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HSVPostViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancelBtn:"/>
+                <relationship kind="action" name="postItBtn:"/>
+                <relationship kind="outlet" name="messageTextView" candidateClass="UITextView"/>
             </relationships>
         </class>
         <class className="HSVViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HSVViewController.h"/>
             <relationships>
+                <relationship kind="action" name="postBtn:"/>
                 <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
             </relationships>
         </class>

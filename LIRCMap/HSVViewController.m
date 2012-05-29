@@ -9,16 +9,16 @@
 #import "HSVViewController.h"
 #import "HSVCustomMapOverlayView.h"
 #import "AFNetworking.h"
+#import "HSVPostViewController.h"
 
 @interface HSVViewController ()
 @property(nonatomic, strong) CLLocationManager *coreLocationManager;
 @property(nonatomic, strong) CLLocation *lastLocation;
+@property(nonatomic, strong) MKCircle *overlay;
 @property(nonatomic, assign) double lastLocationTolerance;
 @property(nonatomic, strong) HSVJSONHelper *jsonHelper;
+
 - (BOOL)isOutsideLastLocation:(CLLocation *)location;
-
-@property(nonatomic, strong) MKCircle *overlay;
-
 
 @end
 
@@ -31,13 +31,6 @@
 @synthesize loginName = _loginName;
 @synthesize accessToken = _accessToken;
 @synthesize jsonHelper = _jsonHelper;
-
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    return self;
-//To change the template use AppCode | Preferences | File Templates.
-}
 
 
 - (void)viewDidLoad
@@ -105,9 +98,6 @@
         [mapView removeOverlay:self.overlay];
         self.overlay = circle;
         [mapView addOverlay:self.overlay];
-        //post a sample message in lieu of a real Message dialog
-        // UNCOMMENT FOR EXAMPLE POSTING
-        //[[self jsonHelper] sendCommentForLat:newLocation.coordinate.latitude longitude:newLocation.coordinate.longitude comment:@"First Post- Woot" forUser:[self loginName] tokenID:[self accessToken] callingFunction:self];
     }
 }
 
@@ -124,21 +114,17 @@
     }
     return NO;
 }
-/*
- * 
- */
--(void)messagePosted:(NSString *)message {
-    if(message) {
-        NSLog(@"The message %@ was posted" , message);
-    } else {
-        NSLog(@"An Error occurred while posting the message");
-    }
-}
--(void)messagesReceived:(NSArray *)messagesArray {
-    if(messagesArray) {
-        NSLog(@"Received messages for this location");
-        NSLog(@"%@", messagesArray);
-    }
-}
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"PostView"]) {
+        HSVPostViewController *postVC = [segue destinationViewController];  
+        postVC.loginName = [self loginName];
+        postVC.accessToken = [self accessToken];
+        postVC.latitude = self.lastLocation.coordinate.latitude;
+        postVC.longitude = self.lastLocation.coordinate.longitude;        
+    }
+}
+- (IBAction)postBtn:(id)sender {
+    [self performSegueWithIdentifier:@"PostView" sender:self];
+}
 @end
