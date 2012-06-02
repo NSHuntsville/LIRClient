@@ -64,7 +64,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="294" y="6"/>
+            <point key="canvasLocation" x="262" y="-26"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="j7a-tr-6kH">
@@ -145,7 +145,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Post a comment about anything you want.  People LIRCing in this area can view your comments" id="zHu-3Y-X8R">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="zHu-3Y-X8R">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="230"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
