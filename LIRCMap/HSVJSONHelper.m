@@ -7,6 +7,7 @@
 
 #import "HSVJSONHelper.h"
 #import "AFNetworking.h"
+#import "HSVJSONRequestOperation.h"
 
 #define kSERVICE_URL  @"http://localhost:3000"
 
@@ -23,13 +24,14 @@
                             nil];
     NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST" path:@"/users/auth" parameters:params];
 
-    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+    HSVJSONRequestOperation *operation = (HSVJSONRequestOperation *)[HSVJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         NSLog(@"HSVJSONHelper Username: %@, access_token: %@", [JSON objectForKey:@"twitter_username"], [JSON objectForKey:@"access_token"]);
         [caller indicateSuccessfulAuthorizationForName:userName withToken:[JSON objectForKey:@"access_token"]];
 
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         NSLog(@"Request Failed with Error: %@, %@", error, error.userInfo);
     }];
+    [httpClient registerHTTPOperationClass:[HSVJSONRequestOperation class]];
     [operation start];
 }
 /*
@@ -55,13 +57,15 @@
                             nil];
     NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST" path:@"/messages" parameters:params];
     
-    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+    HSVJSONRequestOperation *operation = (HSVJSONRequestOperation *)[HSVJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         NSLog(@"HSVJSONHelper Message created: %@", [JSON objectForKey:@"text"]);
         [caller messagePosted:[JSON objectForKey:@"text"]];
         
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         NSLog(@"Request Failed with Error: %@, %@", error, error.userInfo);
     }];
+    [httpClient registerHTTPOperationClass:[HSVJSONRequestOperation class]];
+    
     [operation start];
     
     
@@ -84,7 +88,7 @@
                             nil];
     NSMutableURLRequest *request = [httpClient requestWithMethod:@"GET" path:@"/messages" parameters:params];
     
-    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+    HSVJSONRequestOperation *operation = (HSVJSONRequestOperation *)[HSVJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         if([JSON containsValueForKey:@"text"]) {
             NSLog(@"HSVJSONHelper Latitude: %f, longitude: %f  messages %@", userLat, userLong, [JSON containsValueForKey:@"text"] );
         //callback to our caller    
@@ -96,6 +100,8 @@
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         NSLog(@"Request Failed with Error: %@, %@", error, error.userInfo);
     }];
+    [httpClient registerHTTPOperationClass:[HSVJSONRequestOperation class]];
+    
     [operation start];
     
 }
