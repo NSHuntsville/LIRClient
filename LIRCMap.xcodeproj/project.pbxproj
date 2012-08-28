@@ -37,6 +37,7 @@
 		C9D967EF15700BFC004D2309 /* LIRCStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9D967EE15700BFC004D2309 /* LIRCStoryboard.storyboard */; };
 		C9D967F3157015D5004D2309 /* TitleScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D967F2157015D5004D2309 /* TitleScreen.png */; };
 		C9D967F3157015D5004D230B /* HSVJSONHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D967F3157015D5004D230A /* HSVJSONHelper.m */; };
+		C9F7E536157A5934003CFE6C /* HSVJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F7E535157A5934003CFE6C /* HSVJSONRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-obj-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,8 @@
 		C9D967F2157015D5004D2309 /* TitleScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TitleScreen.png; sourceTree = "<group>"; };
 		C9D967F3157015D5004D230A /* HSVJSONHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSVJSONHelper.m; sourceTree = "<group>"; };
 		C9D967F3157015D5004D230C /* HSVJSONHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSVJSONHelper.h; sourceTree = "<group>"; };
+		C9F7E534157A5934003CFE6C /* HSVJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSVJSONRequestOperation.h; sourceTree = "<group>"; };
+		C9F7E535157A5934003CFE6C /* HSVJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSVJSONRequestOperation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +176,8 @@
 				C9A26BEC1546444400A8BC35 /* HSVViewController.m */,
 				C9A26C121546622B00A8BC35 /* HSVCustomMapOverlayView.h */,
 				C9A26C131546622B00A8BC35 /* HSVCustomMapOverlayView.m */,
+				C9F7E534157A5934003CFE6C /* HSVJSONRequestOperation.h */,
+				C9F7E535157A5934003CFE6C /* HSVJSONRequestOperation.m */,
 				C9B14604157280280071438A /* HSVLoginViewController.h */,
 				C9B14605157280280071438A /* HSVLoginViewController.m */,
 				C931E3561575103800C9AA23 /* HSVPostViewController.h */,
@@ -376,6 +381,7 @@
 				C9B14606157280280071438A /* HSVLoginViewController.m in Sources */,
 				C9D967F3157015D5004D230B /* HSVJSONHelper.m in Sources */,
 				C931E3581575103800C9AA23 /* HSVPostViewController.m in Sources */,
+				C9F7E536157A5934003CFE6C /* HSVJSONRequestOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
